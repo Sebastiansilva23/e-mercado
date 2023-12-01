@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" data-scroll="0">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>eMercado - Todo lo que busques está aquí</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href="css/stylecart.css" rel="stylesheet" />
+		<link rel="icon" href="favicon.ico" />
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-md p-1">
+			<div class="container">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="categories.html">Categorías</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="sell.html">Vender</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item dropdown">
+							<button
+								class="btn shadow-none btn-sm btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center boton-dropdown"
+								type="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<span id="user-info"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-lg-end">
+								<li><a class="dropdown-item" id="irAPerfil" href="#">Ver perfil</a></li>
+								<li><a class="dropdown-item" id="deslogear" href="#">Salir</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<button
+								class="btn shadow-none btn-sm btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center boton-dropdown"
+								style="gap: 5px"
+								id="bd-theme"
+								type="button"
+								aria-expanded="false"
+								data-bs-toggle="dropdown"
+								data-bs-display="static"
+								aria-label="Tema">
+								<i class="bi bi-palette"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="bd-theme-text">
+								<li>
+									<input
+										type="radio"
+										class="btn-check dropdown-item"
+										name="Tema"
+										value="Oscuro"
+										id="Oscuro"
+										autocomplete="off" />
+									<label class="btn checkedefect dropdown-item" for="Oscuro"
+										>Tema oscuro <i class="bi bi-moon"></i
+									></label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										class="btn-check dropdown-item"
+										name="Tema"
+										value="Claro"
+										id="Claro"
+										autocomplete="off" />
+									<label class="btn checkedefect dropdown-item" for="Claro"
+										>Tema claro <i class="bi bi-brightness-high"></i
+									></label>
+								</li>
+								<li>
+									<input
+										type="radio"
+										class="btn-check dropdown-item"
+										name="Tema"
+										value="Sistema"
+										id="Sistema"
+										autocomplete="off" />
+									<label class="btn checkedefect dropdown-item" for="Sistema"
+										>Tema del sistema <i class="bi bi-pc-display"></i
+									></label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="mensajeFinalizado" id="mensajeFinalizadoId">
+			<i class="fas fa-clipboard-check" id="check"></i>
+			¡Tu compra se ha realizada con éxito!
+		</div>
+		<main>
+			<section class="carrito">
+				<h1 class="cartTitle">Carrito de compras</h1>
+				<div id="cartItems">
+					<h2 class="cartTitle">Articulos a comprar</h2>
+					<table id="tableItems"></table>
+				</div>
+			</section>
+
+			<section class="envio-section">
+				<div class="tipoDeEnvio">
+					<h2 class="subtitle Envio">Tipo de envío</h2>
+					<div class="wrapper">
+						<div class="card">
+							<input class="input" type="radio" name="card" id= "basic" value="basic" checked/>
+							<span class="check"></span>
+							<label class="label">
+								<div class="title">STANDARD</div>
+								<div class="price">
+									12~15 días
+									<span class="span">(5%)</span>
+								</div>
+							</label>
+						</div>
+						<div class="card">
+							<input class="input" type="radio" name="card" id="standar" value="standart" />
+							<span class="check"></span>
+							<label class="label">
+								<div class="title">EXPRESS</div>
+								<div class="price">
+									5~8 días
+									<span class="span">(7%)</span>
+								</div>
+							</label>
+						</div>
+						<div class="card">
+							<input class="input" type="radio" name="card" id="premium" value="premium" />
+							<span class="check"></span>
+							<label class="label">
+								<div class="title">PREMIUM</div>
+								<div class="price">
+									2~5 días
+									<span class="span">(15%)</span>
+								</div>
+							</label>
+						</div>
+					</div>
+					<hr>
+					<h3 class="subtitle" style="margin-top: 1em; margin-bottom: 1em">Dirección de envío</h3>
+					<div id="alerta" class="alertas" hidden>
+						<p>Ingrese una <strong>dirección válida</strong></p>
+					</div>
+					<div class="inputGroup">
+						<input id="autocomplete" type="text" required="" autocomplete="off" name="camposDireccion"/>
+					</div>
+					<div class="inputGroup">
+						<input id="inputcalle" type="text" required="" placeholder=" " autocomplete="off" name="camposDireccion" />
+						<label for="inputcalle">Calle</label>
+					</div>
+					<div class="inputGroup">
+						<input id="inputnumero" type="text" required="" placeholder=" " autocomplete="off" name="camposDireccion" />
+						<label for="inputnumero">Numero</label>
+					</div>
+					<div class="inputGroup">
+						<input id="inputesquina" type="text" required="" placeholder=" " autocomplete="off" name="camposDireccion" />
+						<label for="inputnumero">Esquina</label>
+					</div>
+				</div>
+				<div id="map"></div>
+			</section>
+			<div class="accordion" id="costototal-position">
+				<div class="accordion-item">
+				<div id="collapse-one" class="accordion-collapse collapse show" data-bs-parent="#acordeon">
+					<div class="accordion-body">
+						<div class="div">
+							<h5>Productos</h5>
+							<p id="subtotalCostos">USD (placeholder)</p>
+						</div>
+						<div class="div">
+							<h5>Envío</h5>
+							<p id="costoEnvio">USD (placeholder)</p>
+						</div>
+						<hr>
+						<div class="div">
+							<h2>Total</h2>
+							<p id="totalCostos">USD (placeholder)</p>
+						</div>
+						<div class="divbtn">
+							<button id="finalizarcompra" class="btn">Finalizar compra</button>
+						</div>
+					</div>
+				</div>
+				<h1 class="accordion-header">
+					<button class="accordion-button subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
+					Resumen de compra
+					</button>
+				</h1>
+			</div>
+		</div>
+		<section class="costototal-section2">
+			<div id="costos">
+				<h1 class="subtitle">Resumen de compra<hr></h1>
+				<div class="div">
+					<h5>Productos</h5>
+					<p id="subtotalCostos"></p>
+				</div>
+				<div class="div">
+					<h5>Envío</h5>
+					<p id="costoEnvio"></p>
+				</div>
+				<hr>
+				<div class="div">
+					<h2>Total</h2>
+					<p id="totalCostos">USD (placeholder)</p>
+				</div>
+				<div class="divbtn">
+					<button id="finalizarcompra" class="btn">Finalizar compra</button>
+				</div>
+			</div>
+		</section>
+			<!--Sección formas de pago -->
+			<div class="paymentSection">
+				<div id="alertaPago" class="alertas" hidden>
+					<p>Ingrese un <strong>metodo de pago</strong></p>
+				</div>
+				<h3 id="formaPago">Formas de pago</h3>
+				<button onclick="openModal()">Seleccionar</button>
+			</div>
+			<div id="paymentModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()"></span>
+					<form id="paymentForm">
+						<div class="campPaymentForm">
+							<label for="option" id="paymentMethod">
+								Tarjeta de Crédito <input type="radio" id="option1" name="option" />
+							</label>
+						</div>
+						<div class="option1">
+							<div class="campPaymentForm">
+								<label for="accountNumber">Numero de Tarjeta:</label>
+								<input type="text" id="accountNumber" class="pagoCampo" name="camposDePago"/>
+							</div>
+							<div class="campPaymentForm">
+								<label for="secureCode">Código de Seguridad</label>
+								<input type="number" id="secureCode" class="pagoCampo" name="camposDePago"/>
+							</div>
+							<div class="campPaymentForm">
+								<label for="goThroug">Vencimiento</label>
+								<input type="text" id="goThroug" placeholder="mm/aa" class="pagoCampo" name="camposDePago"/>
+							</div>
+						</div>
+						<div class="campPaymentForm">
+							<label for="option" id="paymentMethod">
+								Cuenta Bancaria <input type="radio" name="option" id="option2" />
+							</label>
+						</div>
+
+						<div class="campPaymentForm">
+							<label for="numberAccount">Número de Cuenta </label>
+							<input type="text" id="numberAccount" class="pagoCampo" name="camposDePago"/>
+						</div>
+
+						<div class="campPaymentForm">
+							<button class="closePaymentForm" type="submit">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="text-muted">
+			<div class="container">
+				<p class="float-end">
+					<a href="#">Volver arriba</a>
+				</p>
+				<p>
+					Este sitio forma parte de
+					<a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+					<p>Desarrollado por SubGrupo2 <a href="https://github.com/matonp93/e_mercado_sub2"><i class="bi bi-github"></i></a></p>
+				</p>
+			</div>
+		</footer>
+		<div id="spinner-wrapper">
+			<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<script src="js/init.js"></script>
+		<script src="js/cart.js"></script>
+		<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+		<script
+			async
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAApEaQUDpG-QydzEhRT33QcLoc4LlpHe4&libraries=places&callback=initAutocomplete"></script>
+	</body>
+</html>
